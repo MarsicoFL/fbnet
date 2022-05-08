@@ -4,7 +4,7 @@ Código con las funciones core de fbnet empaquetado con el criterio de CRAN. Tie
 2) Descomprimirlo
 3) Abrir el archivo fbnet.Rproj con R o Rstudio.
 4) Instalar y cargar devtools.
-      > install.packages("devtools")
+      > install.packages("devtools") //
       > library(devtools)
 5) Ejectutar algunas funciones de devtools para chequear instalación.
       > load_all()

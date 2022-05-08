@@ -9,9 +9,12 @@ Código con las funciones core de fbnet empaquetado con el criterio de CRAN. Tie
       > library(devtools)
 5) Ejectutar algunas funciones de devtools para chequear instalación.
       > load_all()
+
       > document()
+
       > install()
 6) Cargar fbnet y testear funciones
       > library(fbnet)
+
       > ?buildCPTs()
 

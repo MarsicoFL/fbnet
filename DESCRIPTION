@@ -18,4 +18,5 @@ Imports:
     grDevices,
     igraph,
     paramlink,
-    stats
+    stats,
+    pedtools

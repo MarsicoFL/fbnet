@@ -6,7 +6,7 @@
 #' @param verbose A logical
 #'
 #' @return A linkdat object:
-#'
+#' @import pedtools
 #'
 #' @export
 convertPed = function(x, verbose=F) {

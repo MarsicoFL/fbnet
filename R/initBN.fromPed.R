@@ -2,7 +2,6 @@
 #'
 #' @param bplotped An alternative ped object to be compared. 
 #' @param ped A ped object in Familias format. 
-#' @import Familias
 #' @import paramlink
 #' @import graphics
 #' @export
@@ -10,10 +9,6 @@
 
 initBN.fromPed<-function(ped,bplotped){
   lLociFreq <-  NULL
-if(class(ped)!="linkdat"){
- warning("Ojo. ped no es objeto linkdat...\n")
- return(-1)
-}
 
 persons <- as.character(ped$orig.ids)
 pid     <- ped$ped[,"FID"];pid[pid==0]<-NA
@@ -26,7 +21,7 @@ linkageR <- rep(0.5,length(systems))
 bSimuData  <- FALSE
 knownIds <- ped$available
 
-ped1 <- Familias::FamiliasPedigree(id=persons,dadid=pid,momid=mid,sex=sex)
+ped1 <- FamiliasPedigree(id=persons,dadid=pid,momid=mid,sex=sex)
 
 
 
@@ -41,7 +36,7 @@ for(i in seq_along(systems)){
   freqs<-c(freqs,1-freqs)
   anames<-c(anames,"ExtraAlelle")
  }
- locus<-Familias::FamiliasLocus(frequencies=freqs,
+ locus<-FamiliasLocus(frequencies=freqs,
                       allelenames=anames,
                       name=systems[i])
  myloci[[systems[i]]]<-locus

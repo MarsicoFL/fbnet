@@ -4,7 +4,6 @@
 #' @param available Genotyped individuals IDs. 
 #' @param lLociFreq Allele frequencies.
 #' @param rseed Seed used for simulations.
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

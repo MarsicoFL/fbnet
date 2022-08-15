@@ -3,7 +3,6 @@
 #' @param bn A bayesian network for pedigree object with information of the genotyped members. The ped object must be in Familias format.
 #' @param resQ List of CPTs.
 #' @param geno data.frame with genotypes.
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

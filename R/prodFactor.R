@@ -1,7 +1,6 @@
 #' prodFactor: a function for performing product between probability tables.
 #'
 #' @param laux probability distribution aux
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

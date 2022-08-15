@@ -2,7 +2,6 @@
 #'
 #' @param bn A bayesian network (output of buildBN function).
 #' @param verbose Computation output.
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

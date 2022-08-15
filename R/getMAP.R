@@ -2,7 +2,6 @@
 #'
 #' @param topn Format parameter.
 #' @param resQ List of CPTs.
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

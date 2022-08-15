@@ -4,9 +4,13 @@
 #' @param ordMethod Selected ordering method between id, min_degree, min_fill and fixed.
 #' @param orderElim Elimination order.
 #' @param verbose Computation output.
-#' @import Familias
 #' @import paramlink
 #' @import igraph
+#' @examples
+#' pbn  <- initBN(toyped)
+#' bnet <- buildBN(pbn,QP=3)
+#' bn1  <- buildCPTs(bnet)
+#' resQ <- velim.bn(bn1,ordMethod="min_fill",verbose=FALSE)
 #' @export
 #' @return Variable elimination result.
 
@@ -417,4 +421,3 @@ laux<-list(T1=T1,T2=T2,T3=T3)
             })
  return(res)
 }
-

@@ -17,3 +17,6 @@ A bayesian network.
 \description{
 initBN: a function to initialize the bayesian network.
 }
+\examples{
+pbn  <- initBN(toyped)
+}

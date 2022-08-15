@@ -1,7 +1,6 @@
 #' evidencePrunning: a fuction for pruning instantiated variables.
 #'
 #' @param bn A bayesian network (output of buildBN function).
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

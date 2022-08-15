@@ -1,7 +1,6 @@
 #' stateRemoval: a function for processing the bayesian network.
 #'
 #' @param bn A bayesian network (output of buildBN function).
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

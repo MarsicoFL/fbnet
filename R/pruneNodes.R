@@ -1,7 +1,6 @@
 #' pruneNodes: a fuction for clasical pruning in bayesian networks.
 #'
 #' @param bn A bayesian network (output of buildBN function).
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

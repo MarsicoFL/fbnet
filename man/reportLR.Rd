@@ -2,7 +2,7 @@
 % Please edit documentation in R/reportLR.R
 \name{reportLR}
 \alias{reportLR}
-\title{reportPQ: a function for calculating the LRs of specified genotypes in a pedigree.}
+\title{reportLR: a function for calculating the LRs of specified genotypes in a pedigree.}
 \usage{
 reportLR(bn, resQ, geno = NULL)
 }
@@ -17,5 +17,5 @@ reportLR(bn, resQ, geno = NULL)
 A dataframe with LRs.
 }
 \description{
-reportPQ: a function for calculating the LRs of specified genotypes in a pedigree.
+reportLR: a function for calculating the LRs of specified genotypes in a pedigree.
 }

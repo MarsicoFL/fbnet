@@ -2,7 +2,6 @@
 #'
 #' @param cpt Conditional probability table
 #' @param Z factor
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

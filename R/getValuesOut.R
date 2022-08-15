@@ -2,7 +2,6 @@
 #'
 #' @param cpt conditional probability table from the bayesian network
 #' @param condVar variables from the conditioning table
-#' @import Familias
 #' @import paramlink
 #' @import igraph
 #' @export

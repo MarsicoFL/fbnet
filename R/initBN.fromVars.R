@@ -1,14 +1,13 @@
 #' initBN.fromVars: a function to initialize the bayesian network.
 #'
 #' @param bplotped An alternative ped object to be compared. 
-#' @import Familias
 #' @import paramlink
 #' @import graphics
 #' @export
 #' @return A bayesian network.
 
 initBN.fromVars<-function(bplotped){
-ped1 <- Familias::FamiliasPedigree(id=persons,dadid=pid,momid=mid,sex=sex)
+ped1 <- FamiliasPedigree(id=persons,dadid=pid,momid=mid,sex=sex)
 
 persons <- pid <- mid <- sex <- systems <- lLociFreq <- linkageR <- bSimuData <- simuKnownIds <- QP <- NULL
 myloci <- list()
@@ -22,7 +21,7 @@ for(i in seq_along(systems)){
   freqs<-c(freqs,1-freqs)
   anames<-c(anames,"ExtraAlelle")
  } 
- locus<-Familias::FamiliasLocus(frequencies=freqs,
+ locus<-FamiliasLocus(frequencies=freqs,
                       allelenames=anames,
                       name=systems[i])                      
  myloci[[systems[i]]]<-locus

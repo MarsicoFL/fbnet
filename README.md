@@ -1,7 +1,19 @@
 <img src="logo.png" align="right" width="120">
 
 # fbnet
-Código con las funciones core de fbnet empaquetado con el criterio de CRAN. Tiene además las distintas funciones comentadas y un manual de referencia. Pasa el test de > R CMD check --as-cran con una nota "New submission". Para usarlo hay que:
+fbnet is an open source software package written in R statistical languaje.
+It relies on a Bayesian Networks framework and it is particularly well suited
+to efficiently perform large-size queries against databases of missing individuals.
+It could interact with the main functionallities of other packages for pedigree analysis. 
+In particular, 'fbnet' imports the 'Familias' software (Egeland et al. (2000)
+\doi{10.1016/S0379-0738(00)00147-X}). In addition 'pedtools', a software for creating 
+and manipulating pedigrees and markers, is supported. 'fbnet' allows computing LRs
+and obtaining genotype probability distributions for query individual, based on 
+the pedigree data.
+'fbnet' implements the complete GENis functionality, a recently published open-source 
+multi-tier information system developed to run forensic DNA databases  
+to perform kinship analysis based on DNA profiles \doi{10.1016/j.fsir.2020.100132})
+Para usarlo hay que:
 1) descargar el código (click en code y luego dowload).
 2) Descomprimirlo
 3) Abrir el archivo fbnet.Rproj con R o Rstudio.

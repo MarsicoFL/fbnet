@@ -1,5 +1,4 @@
-![](logo.png =100x20)
-
+<img src="logo.png" width="200">
 # fbnet
 Código con las funciones core de fbnet empaquetado con el criterio de CRAN. Tiene además las distintas funciones comentadas y un manual de referencia. Pasa el test de > R CMD check --as-cran con una nota "New submission". Para usarlo hay que:
 1) descargar el código (click en code y luego dowload).

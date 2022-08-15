@@ -5,9 +5,9 @@ fbnet is an open source software package written in R statistical languaje.
 It relies on a Bayesian Networks framework and it is particularly well suited
 to efficiently perform large-size queries against databases of missing individuals.
 It could interact with the main functionallities of other packages for pedigree analysis. 
-In particular, 'fbnet' imports the 'Familias' software (Egeland et al. (2000)
+In particular, fbnet can interpret the pedigree formats from 'Familias' software (Egeland et al. (2000)
 \doi{10.1016/S0379-0738(00)00147-X}). In addition 'pedtools', a software for creating 
-and manipulating pedigrees and markers, is supported. 'fbnet' allows computing LRs
+and manipulating pedigrees and markers, is supported. fbnet allows computing LRs
 and obtaining genotype probability distributions for query individual, based on 
 the pedigree data.
 'fbnet' implements the complete GENis functionality, a recently published open-source 

@@ -10,10 +10,12 @@ In particular, fbnet can interpret the pedigree formats from 'Familias' software
 and manipulating pedigrees and markers, is supported. fbnet allows computing LRs
 and obtaining genotype probability distributions for query individual, based on 
 the pedigree data.
-'fbnet' implements the complete GENis functionality, a recently published open-source 
+fbnet implements the complete GENis functionality, a recently published open-source 
 multi-tier information system developed to run forensic DNA databases  
 to perform kinship analysis based on DNA profiles \doi{10.1016/j.fsir.2020.100132})
 Para usarlo hay que:
+
+
 1) descargar el código (click en code y luego dowload).
 2) Descomprimirlo
 3) Abrir el archivo fbnet.Rproj con R o Rstudio.

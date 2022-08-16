@@ -10,11 +10,19 @@ fbnet allows computing LRs and obtaining genotype probability distributions for 
 
 fbnet implements the complete GENis functionality, a recently published open-source multi-tier information system developed to run forensic DNA databases to perform kinship analysis based on DNA profiles.
 
-Example data could be parsed as follows:
-
+Stable version could be installed from CRAN:
 
       > install.packages("fbnet") 
       > library(fbnet)
+
+
+Version under development could be installed as follows: 
+
+      > install_github("MarsicoFL/fbnet")
+      > library(fbnet)
+      
+ Example data could be parsed as follows:
+ 
       > pbn  <- initBN(toyped)
       > bnet <- buildBN(pbn,QP=3)
       > bn1  <- buildCPTs(bnet)

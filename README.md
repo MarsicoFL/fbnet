@@ -17,6 +17,7 @@ Stable version could be installed from CRAN:
 
 
 Version under development could be installed as follows: 
+
       > library(devtools)
       > install_github("MarsicoFL/fbnet")
       > library(fbnet)

@@ -13,21 +13,9 @@ to perform kinship analysis based on DNA profiles.
 Para usarlo hay que:
 
 
-
-1) descargar el código (click en code y luego dowload).
-2) Descomprimirlo
-3) Abrir el archivo fbnet.Rproj con R o Rstudio.
-4) Instalar y cargar devtools.
-      > install.packages("devtools") 
-      
-      > library(devtools)
-5) Ejectutar algunas funciones de devtools para chequear instalación.
-      > load_all()
-
-      > document()
-
-      > install()
-6) Cargar fbnet y testear funciones
+      > install.packages("fbnet") 
       > library(fbnet)
-
-      > ?fbnet()
+      > pbn  <- initBN(toyped)
+      > bnet <- buildBN(pbn,QP=3)
+      > bn1  <- buildCPTs(bnet)
+      > resQ <- velim.bn(bn1,ordMethod="min_fill",verbose=FALSE)

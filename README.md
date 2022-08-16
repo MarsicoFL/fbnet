@@ -7,7 +7,7 @@ It could interact with the main functionallities of other packages for pedigree 
 
 fbnet allows computing LRs and obtaining genotype probability distributions for query individuals, based on the pedigree data. 
 
-fbnet implements the complete GENis functionality, a recently published open-source multi-tier information system developed to run forensic DNA databases to perform kinship analysis based on DNA profiles. For more information about GENis see [a link](https://www.sciencedirect.com/science/article/pii/S2665910720300815?via%3Dihub)
+fbnet implements the complete GENis functionality, a recently published open-source multi-tier information system developed to run forensic DNA databases to perform kinship analysis based on DNA profiles. For more information about GENis see [Chernomoretz et al.](https://www.sciencedirect.com/science/article/pii/S2665910720300815?via%3Dihub)
 .
 
 Stable version could be installed from CRAN:

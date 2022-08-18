@@ -74,3 +74,8 @@ Locus analysis.
 \description{
 FamiliasLocus: a function for reading Familias locus data.
 }
+\examples{
+frequencies <- c(0.1, 0.2, 0.3, 0.4)
+allelenames <- c("A", "B", "C", "D")
+marker <- FamiliasLocus(frequencies, allelenames)
+}

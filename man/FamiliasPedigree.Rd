@@ -21,3 +21,8 @@ A dataframe with probabilities.
 \description{
 FamiliasPedigree: a function for constructing Familias pedigree format.
 }
+\examples{
+persons <- c("mother", "child", "AF")
+sex <- c("female", "female", "male")
+ped1 <- FamiliasPedigree(id = persons, dadid = c(NA, "AF", NA),momid = c(NA, "mother", NA), sex=sex)
+}

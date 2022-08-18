@@ -21,6 +21,10 @@
 #' @param maleMutationRate2 rate 2
 #' @param maleMutationMatrix matrix
 #' @import Rsolnp
+#' @examples
+#' frequencies <- c(0.1, 0.2, 0.3, 0.4)
+#' allelenames <- c("A", "B", "C", "D")
+#' marker <- FamiliasLocus(frequencies, allelenames)
 #' @export
 #' @return Locus analysis.
 
@@ -273,42 +277,42 @@ FamiliasLocus <- function (frequencies, allelenames, name,
             res <- stabilize(femaleMutationMatrix[1:nAll,1:nAll], frequencies[1:nAll]/sum(frequencies[1:nAll]),
                              Stabilization, MaxStabilizedMutrate)
             if (res$error!="") {
-                print(paste("WARNING:", res$error))
-                print("WARNING: Female mutation matrix not stabilized.")
+                message(paste("WARNING:", res$error))
+                message("WARNING: Female mutation matrix not stabilized.")
             } else {
-                print(paste("Female mutation matrix f ratio:", res$fratio))
-                print(paste("Female mutation matrix max specific mutation rate:", 1-res$mindiag))
+                message(paste("Female mutation matrix f ratio:", res$fratio))
+                message(paste("Female mutation matrix max specific mutation rate:", 1-res$mindiag))
                 femaleMutationMatrix[1:nAll,1:nAll] <- res$stabilized
             }
             res <- stabilize(maleMutationMatrix[1:nAll,1:nAll], frequencies[1:nAll]/sum(frequencies[1:nAll]),
                              Stabilization, MaxStabilizedMutrate)
             if (res$error!="") {
-                print(paste("WARNING:", res$error))
-                print("WARNING: Male mutation matrix not stabilized.")
+                message(paste("WARNING:", res$error))
+                message("WARNING: Male mutation matrix not stabilized.")
             } else {
-                print(paste("Male mutation matrix f ratio:", res$fratio))
-                print(paste("Male mutation matrix max specific mutation rate:", 1-res$mindiag))
+                message(paste("Male mutation matrix f ratio:", res$fratio))
+                message(paste("Male mutation matrix max specific mutation rate:", 1-res$mindiag))
                 maleMutationMatrix[1:nAll,1:nAll] <- res$stabilized
             }
         } else {
             res <- stabilize(femaleMutationMatrix, frequencies,
                              Stabilization, MaxStabilizedMutrate)
             if (res$error!="") {
-                print(paste("WARNING:", res$error))
-                print("WARNING: Female mutation matrix not stabilized.")
+                message(paste("WARNING:", res$error))
+                message("WARNING: Female mutation matrix not stabilized.")
             } else {
-                print(paste("Female mutation matrix f ratio:", res$fratio))
-                print(paste("Female mutation matrix max specific mutation rate:", 1-res$mindiag))
+                message(paste("Female mutation matrix f ratio:", res$fratio))
+                message(paste("Female mutation matrix max specific mutation rate:", 1-res$mindiag))
                 femaleMutationMatrix <- res$stabilized
             }
             res <- stabilize(maleMutationMatrix, frequencies,
                              Stabilization, MaxStabilizedMutrate)
             if (res$error!="") {
-                print(paste("WARNING:", res$error))
-                print("WARNING: Male mutation matrix not stabilized.")
+                message(paste("WARNING:", res$error))
+                message("WARNING: Male mutation matrix not stabilized.")
             } else {
-                print(paste("Male mutation matrix f ratio:", res$fratio))
-                print(paste("Male mutation matrix max specific mutation rate:", 1-res$mindiag))
+                message(paste("Male mutation matrix f ratio:", res$fratio))
+                message(paste("Male mutation matrix max specific mutation rate:", 1-res$mindiag))
                 maleMutationMatrix <- res$stabilized
             }
         }
@@ -353,7 +357,7 @@ stabilize = function(M,pe,stabilizationMethod="DP",t=1){
       return(list(stabilized=M,fratio=1,mindiag=min(diag(M)),error="DP stabilization doesn't exist."))
     }
     if (n>30)
-      print("NOTE: Stabilization comuptations may take long time for large systems.")
+      message("NOTE: Stabilization comuptations may take long time for large systems.")
     pnew = pKCompute(pe,diag(M))
     P0 = (diag(n)-diag(diag(M)))%*%diag(1/(1-pnew))%*%(outer(rep(1,n),pnew)-diag(pnew)) + diag(diag(M))
     P = theOpting(M,P0,pe)
@@ -366,7 +370,7 @@ stabilize = function(M,pe,stabilizationMethod="DP",t=1){
     if (min(P)<0){
       return(list(error="The proposed stabilization has negative elements."))
     } else if (min(P)<tol){
-      print("WARNING: The proposed stabilization has very small elements.")
+      message("WARNING: The proposed stabilization has very small elements.")
     }
     fratio = max(max(P/M),max(M/P))
     minS = min(diag(P))
@@ -375,7 +379,7 @@ stabilize = function(M,pe,stabilizationMethod="DP",t=1){
     if (t<R+tol | t>1)
       return(list(error="MaxStabilizedMutrate parameter out of bounds."))
     if (n>30)
-      print("NOTE: Stabilization comuptations may take long time for large systems.")
+      message("NOTE: Stabilization comuptations may take long time for large systems.")
     C = matrix(0,2*n,m)
     for (i in 1:n){
       C[seq(1,n),seq(n*(i-1)+1,n*i)] = diag(n)
@@ -603,7 +607,6 @@ theOpting = function(M,S,p){
     aRun = SgivenMopt(M,S,p)
     S = aRun$newS
     go = aRun$changed
-    #print(fratio(M,S))
   }
   return(S)
 }
@@ -615,7 +618,6 @@ theOptingRM = function(M,S,p,t){
     aRun = SgivenMoptRM(M,S,p,t)
     S = aRun$newS
     go = aRun$changed
-    #print(fratio(M,S))
   }
   return(S)
 }

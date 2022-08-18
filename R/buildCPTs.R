@@ -132,6 +132,6 @@ buildCPTs<-function(bn,bNodePrunning=TRUE,bStateRemoval=TRUE,bStateRemoval2=TRUE
     }
   }
   bn$vars <- lvars
-  if(debug)print(mfoo)
+  if(debug)message(mfoo)
   return(bn)
  }

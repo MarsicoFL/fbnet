@@ -4,6 +4,10 @@
 #' @param dadid father id
 #' @param momid mother id
 #' @param sex biological sex
+#' @examples
+#' persons <- c("mother", "child", "AF")
+#' sex <- c("female", "female", "male")
+#' ped1 <- FamiliasPedigree(id = persons, dadid = c(NA, "AF", NA),momid = c(NA, "mother", NA), sex=sex)
 #' @export
 #' @return A dataframe with probabilities.
 

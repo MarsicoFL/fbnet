@@ -4,7 +4,7 @@
 \alias{convertPedformat}
 \title{convertPedformat: a function for converting a pedtools ped onject to a famlink ped object.}
 \usage{
-convertPedformat(x, verbose = F)
+convertPedformat(x, verbose = FALSE)
 }
 \arguments{
 \item{x}{A pedtools ped object.}

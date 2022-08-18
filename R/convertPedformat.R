@@ -6,7 +6,7 @@
 #' @export
 #' @return A dataframe with LRs.
 
-convertPedformat = function(x, verbose=F) {
+convertPedformat = function(x, verbose=FALSE) {
   afreq <- alleles <- chrom <- isXmarker <- mutmod <- nAlleles <- name <- posMb <- NULL
   famid = 1
 

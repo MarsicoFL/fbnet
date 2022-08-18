@@ -5,12 +5,12 @@ Authors@R:
    c(person(given = "Ariel",
            family = "Chernomoretz",
            role = c("aut"),
-           email = "algo107@gmail.com"),
+           email = "ariel@df.uba.ar"),
      person(given = "Franco",
            family = "Marsico",
            role = c("aut", "cre"),
            email = "franco.lmarsico@gmail.com"))
-Description: Forensic bayesian networks is an R package for computing likelihood ratios in kinship testing and human identification cases.
+Description: Open-source package for computing likelihood ratios in kinship testing and human identification cases (Chernomoretz et al. (2021) <doi:10.1016/j.fsir.2020.100132>).  It relies on a Bayesian Networks framework and is particularly well suited to efficiently perform large-size queries against databases of missing individuals (Darwiche (2009) <doi:10.1017/CBO9780511811357>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

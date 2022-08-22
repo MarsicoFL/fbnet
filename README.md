@@ -1,6 +1,6 @@
 <img src="logo.png" align="right" width="120">
 
-# FBNET
+# fbnet
 fbnet is an open source software package written in R statistical languaje.
 It relies on a Bayesian Networks framework and it is particularly well suited
 to efficiently perform large-size queries against databases of missing individuals.

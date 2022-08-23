@@ -1,6 +1,15 @@
 <img src="logo.png" align="right" width="120">
 
 # fbnet
+
+<!-- badges: start -->
+
+[![CRAN status](https://www.r-pkg.org/badges/version/fbnet)](https://CRAN.R-project.org/package=fbnet)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/fbnet?color=blue)](https://cran.r-project.org/package=fbnet)
+
+<!-- badges: end -->
+
+
 fbnet is an open source software package written in R statistical languaje.
 It relies on a Bayesian Networks framework and it is particularly well suited
 to efficiently perform large-size queries against databases of missing individuals.
@@ -10,24 +19,8 @@ and obtaining genotype probability distributions for query individual, based on
 the pedigree data. fbnet implements the complete GENis functionality, a recently published open-source 
 multi-tier information system developed to run forensic DNA databases  
 to perform kinship analysis based on DNA profiles.
-Para usarlo hay que:
+Run example as follows:
 
-
-
-1) descargar el código (click en code y luego dowload).
-2) Descomprimirlo
-3) Abrir el archivo fbnet.Rproj con R o Rstudio.
-4) Instalar y cargar devtools.
-      > install.packages("devtools") 
-      
-      > library(devtools)
-5) Ejectutar algunas funciones de devtools para chequear instalación.
-      > load_all()
-
-      > document()
-
-      > install()
-6) Cargar fbnet y testear funciones
+      > install.packages("fbnet") 
       > library(fbnet)
-
-      > ?fbnet()
+      > 

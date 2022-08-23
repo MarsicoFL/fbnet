@@ -27,3 +27,4 @@ Run example as follows:
       > bn1  <- buildCPTs(bnet)
       > resQ <- velim.bn(bn1,ordMethod="min_fill",verbose=FALSE)
 
+After executing these lines you will obtain the conditioned genotype probability table for the query person. With reportLR() function you will be able to introduce genotypes for an unidentified person in order to calculate kinship likelihood ratio.

@@ -8,6 +8,7 @@
 <!-- badges: start -->
 
 [![CRAN status](https://www.r-pkg.org/badges/version/fbnet)](https://CRAN.R-project.org/package=fbnet)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/fbnet?color=blue)](https://cran.r-project.org/package=fbnet)
 
 <!-- badges: end -->
 

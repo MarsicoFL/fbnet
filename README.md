@@ -1,5 +1,5 @@
-<img src="logo.png" align="right" width="120">
-<img src="genis.png" align="left" width="120">
+<img src="logo.png" align="right" width="80">
+<img src="genis.png" align="left" width="80">
 
 
 

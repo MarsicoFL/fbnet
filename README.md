@@ -1,4 +1,4 @@
-<img src="logo.png" align="right" width="80">
+<img src="logo.png" align="right" width="70">
 <img src="genis.png" align="left" width="80">
 
 

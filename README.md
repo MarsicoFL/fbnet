@@ -16,7 +16,7 @@ to efficiently perform large-size queries against databases of missing individua
 It could interact with the main functionallities of other packages for pedigree analysis. 
 In particular, fbnet can interpret the pedigree formats from 'Familias' software. In addition 'pedtools', a software for creating and manipulating pedigrees and markers, is supported. fbnet allows computing LRs
 and obtaining genotype probability distributions for query individual, based on 
-the pedigree data. fbnet implements the complete GENis functionality, a recently published open-source 
+the pedigree data. fbnet implements the complete *GENis* functionality, a recently published open-source 
 multi-tier information system developed to run forensic DNA databases to perform kinship analysis based on DNA profiles.
 Run an example as follows:
 

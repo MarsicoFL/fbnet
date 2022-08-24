@@ -30,4 +30,4 @@ Run an example as follows:
 After executing these lines you will obtain the conditioned genotype probability table for the query person. With reportLR() function you will be able to introduce genotypes for an unidentified person in order to calculate kinship likelihood ratio.
 
 
-fbnet and GENis softwares are projects from Fundación Sadosky https://www.fundacionsadosky.org.ar/ 
+fbnet and GENis softwares are projects supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ 

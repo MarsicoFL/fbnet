@@ -1,0 +1,16 @@
+citHeader("To cite fbnet in publications use:")
+
+citEntry(
+  entry    = "Article",
+  title    = "Bayesian networks for DNA-based kinship analysis: Functionality and validation of the GENis missing person identification module",
+  author   = "Chernomoretz, Ariel and Marsico, Franco and Iserte, Javier and Pinero, Mariana Herrera and Escobar, Maria Soledad and Balparda, Manuel and Sibilla, Gustavo",
+  journal  = "Forensic Science International: Genetics Supplement Series",
+  year     = "2022",
+  volume   = " ",
+  number   = " ",
+  pages    = " ",
+  url      = "https://doi.org/10.1016/j.fsigss.2022.10.008",
+  textVersion = paste(
+
+  )
+)

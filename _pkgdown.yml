@@ -1,5 +1,16 @@
 url: ~
 template:
   bootstrap: 5
-  bootswatch: cerulean
+  bslib:
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "JetBrains Mono"}
 
+navbar:
+  structure:
+    left:  [intro, reference, articles, tutorials, news]
+    right: [search, github]
+
+home:
+  sidebar:
+    structure: [links, license, community, citation, authors, dev]

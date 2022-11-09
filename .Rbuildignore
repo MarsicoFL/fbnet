@@ -5,3 +5,6 @@
 ^README_files$
 ^logo.png
 ^genis.png
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

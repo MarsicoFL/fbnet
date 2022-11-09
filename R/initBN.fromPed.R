@@ -2,7 +2,6 @@
 #'
 #' @param bplotped An alternative ped object to be compared. 
 #' @param ped A ped object in Familias format. 
-#' @import paramlink
 #' @import graphics
 #' @export
 #' @return A bayesian network.
@@ -53,7 +52,7 @@ for(i in seq_along(linkageR)){
 }
 
 
-auxped <- paramlink::Familias2linkdat(ped1,NULL,myloci)
+auxped <- Familias2linkdat(ped1,NULL,myloci)
 auxped$markerdata <- ped$markerdata
 auxped$available  <- ped$available
 auxped$nMark      <- ped$nMark

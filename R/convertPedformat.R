@@ -2,7 +2,6 @@
 #'
 #' @param x A pedtools ped object.
 #' @param verbose  Function output.
-#' @import paramlink
 #' @export
 #' @return A dataframe with LRs.
 
@@ -16,7 +15,7 @@ convertPedformat = function(x, verbose=FALSE) {
   p = cbind(famid, as.matrix(x), 1)
   colnames(p) = c("FAMID", "ID", "FID", "MID", "SEX", "AFF")
 
-  y = paramlink::linkdat(p, verbose=verbose)
+  y = linkdat(p, verbose=verbose)
 
   if(!is.null(mlist)) {
     mlist = lapply(mlist, function(m) {
@@ -33,7 +32,7 @@ convertPedformat = function(x, verbose=FALSE) {
              class = "marker")
       m
     })
-    y = paramlink::setMarkers(y, mlist)
+    y = SetMarkersfb(y, mlist)
   }
   y
 }

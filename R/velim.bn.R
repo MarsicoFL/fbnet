@@ -4,7 +4,6 @@
 #' @param ordMethod Selected ordering method between id, min_degree, min_fill and fixed.
 #' @param orderElim Elimination order.
 #' @param verbose Computation output.
-#' @import paramlink
 #' @import igraph
 #' @examples
 #' pbn  <- initBN(toyped)

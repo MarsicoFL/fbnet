@@ -4,7 +4,6 @@
 #' @param available Genotyped individuals IDs. 
 #' @param lLociFreq Allele frequencies.
 #' @param rseed Seed used for simulations.
-#' @import paramlink
 #' @import igraph
 #' @export
 #' @return A ped object.
@@ -21,11 +20,11 @@ preparePed<-function(ped,available,lLociFreq,rseed=NULL){
      afreq<-afreq[-iout]
     }
 
-    paux   <- markerSim(ped, N=1, alleles=alleles,afreq=afreq,verbose=FALSE)
+    paux   <- markerSimfb(ped, N=1, alleles=alleles,afreq=afreq,verbose=FALSE)
     mallele<- matrix(attr(paux$markerdata[[1]],"alleles")[paux$markerdata[[1]]],ncol=2)
 
-    maux <- marker(ped,allelematrix=mallele,alleles=alleles,afreq=afreq,name=names(lLociFreq)[i])
-    ped  <- addMarker(ped,maux)
+    maux <- markerfb(ped,allelematrix=mallele,alleles=alleles,afreq=afreq,name=names(lLociFreq)[i])
+    ped  <- addMarkerfb(ped,maux)
  }
 
  inotEv <- ped$orig.ids[!ped$orig.ids%in%available]

@@ -2,7 +2,6 @@
 #'
 #' @param pbn A bayesian network for pedigree object with information of the genotyped members. The ped object must be in Familias format.
 #' @param QP Query Persons Ids
-#' @import paramlink
 #' @import igraph
 #' @import grDevices
 #' @examples

@@ -1,7 +1,6 @@
 #' reverseSpit: a function for formatting.
 #'
 #' @param inList input for formatting.
-#' @import paramlink
 #' @import graphics
 #' @export
 #' @return A bayesian network.

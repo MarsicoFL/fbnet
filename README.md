@@ -17,7 +17,7 @@ It relies on a Bayesian Networks framework and it is particularly well suited
 to efficiently perform large-size queries against databases of missing individuals.
 It could interact with the main functionallities of other packages for pedigree analysis. 
 In particular, fbnet can interpret the pedigree formats from 'Familias' software. In addition 'pedtools', a software for creating and manipulating pedigrees and markers, is supported. fbnet allows computing LRs
-and obtaining genotype probability distributions for query individual, based on 
+and obtaining genotype probability distributions for a query individual, based on 
 the pedigree data.
 
-fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ 
+fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ and the Ministry of Science of Argentina 

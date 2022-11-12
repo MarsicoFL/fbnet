@@ -20,4 +20,4 @@ In particular, fbnet can interpret the pedigree formats from 'Familias' software
 and obtaining genotype probability distributions for a query individual, based on 
 the pedigree data.
 
-fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ and the Ministry of Science of Argentina 
+fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ and Ministerio de Ciencia, Tecnología e Innovación of Argentina https://www.argentina.gob.ar/ciencia

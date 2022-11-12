@@ -89,8 +89,8 @@
 </h2>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>At first, fbnet library should loaded. Toyped is a default example
-available in fbnet package. You can install fbnet like so:</p>
+<p>At first, fbnet library should be loaded. You can install fbnet
+pasting the following lines:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"fbnet"</span><span class="op">)</span> </span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">fbnet</span><span class="op">)</span></span></code></pre></div>
@@ -100,9 +100,9 @@ available in fbnet package. You can install fbnet like so:</p>
 </h2>
 <p>“Toyped” is a pedigree example provided by fbnet package. Also, fbnet
 could work with pedigree object produced by pedtools R package. As could
-be seen, “Toyped” is a pedigree with three members (Ids 1, 2 and 3). FID
-is the ID, MID is the mother ID. Therefore, 1 and 2 are founders and ID
-3 parents are 1 and 2.</p>
+be observed, “Toyped” is a pedigree with three members (Ids 1, 2 and 3).
+FID is the father ID, MID is the mother ID. Therefore, 1 and 2 are
+founders and ID 3 parents are 1 and 2.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">toyped</span><span class="op">[[</span><span class="st">"pedigree"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="co">#&gt;      ID FID MID SEX AFF</span></span>
@@ -110,10 +110,10 @@ is the ID, MID is the mother ID. Therefore, 1 and 2 are founders and ID
 <span><span class="co">#&gt; [2,]  2   0   0   2   1</span></span>
 <span><span class="co">#&gt; [3,]  3   1   2   1   1</span></span></code></pre></div>
 <p>The first step for fbnet pedigree processing is initialize the
-Bayesian Network through initBN function. Once generated, pbn stores
-some parameters, such as reference population allele frequencies. In the
-example two markers are analyzed, M1 and M2, with four alleles each
-one.</p>
+Bayesian Network through initBN function. Once generated, pbn object
+stores some parameters, such as reference population allele frequencies.
+In the example two markers are analyzed, M1 and M2, with four alleles
+each one.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pbn</span>  <span class="op">&lt;-</span> <span class="fu"><a href="../reference/initBN.html">initBN</a></span><span class="op">(</span><span class="va">toyped</span><span class="op">)</span></span>
 <span><span class="va">pbn</span><span class="op">[[</span><span class="st">"alelFreq"</span><span class="op">]</span><span class="op">]</span></span>
@@ -124,8 +124,8 @@ one.</p>
 <span><span class="co">#&gt; $M2</span></span>
 <span><span class="co">#&gt;    A    B    C    D </span></span>
 <span><span class="co">#&gt; 0.25 0.25 0.25 0.25</span></span></code></pre></div>
-<p>And both the mother (ID 2) is genotyped, being M1_p, mothers paternal
-allele and M1_m mothers maternal allele.</p>
+<p>The mother (ID 2) is genotyped, being M1_p, mothers paternal allele
+and M1_m mothers maternal allele.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pbn</span><span class="op">[[</span><span class="st">"markerEvidence"</span><span class="op">]</span><span class="op">]</span></span>
 <span><span class="co">#&gt;   M1_p M1_m M2_p M2_m</span></span>
@@ -156,9 +156,9 @@ loaded.</p>
 <h2 id="computing-genotype-conditional-probability-tables">Computing genotype conditional probability tables<a class="anchor" aria-label="anchor" href="#computing-genotype-conditional-probability-tables"></a>
 </h2>
 <p>The Bayesian network allows computing allele conditional probability
-tables. This process could be computationally expensive. After building
-CPTs, variable elimination approach used, it is a process by which we
-successively remove variables from the Bayesian network while
+tables (CPTs). This process could be computationally expensive. After
+building CPTs, variable elimination approach used, it is a process by
+which we successively remove variables from the Bayesian network while
 maintaining its ability to answer queries of interest.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bn1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/buildCPTs.html">buildCPTs</a></span><span class="op">(</span><span class="va">bnet</span><span class="op">)</span></span>
@@ -168,11 +168,10 @@ maintaining its ability to answer queries of interest.</p>
 <h2 id="analyzing-conditioned-probabilities">Analyzing conditioned probabilities<a class="anchor" aria-label="anchor" href="#analyzing-conditioned-probabilities"></a>
 </h2>
 <p>Once computed, resQ contains conditioned genotype probabilities for
-individual 3, based on available evidence in the pedigree. The output
-allows us to compare conditioned probabilities with reference population
-data. Firstly, some data formatting should be done.</p>
-<p>Firstly, some packages must be loaded for data analyses and
-plots.</p>
+individual 3, based on the available evidence in the pedigree. The
+output allows us to compare conditioned probabilities with reference
+population data. Firstly, some data formatting should be done.</p>
+<p>Some packages must be loaded for data analyses and plots.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></span>

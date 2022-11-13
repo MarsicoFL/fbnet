@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 <!-- badges: end -->
-At first, fbnet library should loaded. Toyped is a default example available in fbnet package. You can install fbnet like so:
+At first, fbnet library should be loaded. You can install fbnet pasting the following lines:
 
 ``` {r, message=FALSE, results='hide'}
 install.packages("fbnet") 
@@ -27,19 +27,19 @@ library(fbnet)
 ```
 
 # Setting up the pedigree
-"Toyped" is a pedigree example provided by fbnet package. Also, fbnet could work with pedigree object produced by pedtools R package. As could be seen, "Toyped" is a pedigree with three members (Ids 1, 2 and 3). FID is the ID, MID is the mother ID. Therefore, 1 and 2 are founders and ID 3 parents are 1 and 2.   
+"Toyped" is a pedigree example provided by fbnet package. Also, fbnet could work with pedigree object produced by pedtools R package. As could be observed, "Toyped" is a pedigree with three members (Ids 1, 2 and 3). FID is the father ID, MID is the mother ID. Therefore, 1 and 2 are founders and ID 3 parents are 1 and 2.   
 ```{r toyped}
 toyped[["pedigree"]]
 ```
 
-The first step for fbnet pedigree processing is initialize the Bayesian Network through initBN function. Once generated, pbn stores some parameters, such as reference population allele frequencies. In the example two markers are analyzed, M1 and M2, with four alleles each one. 
+The first step for fbnet pedigree processing is initialize the Bayesian Network through initBN function. Once generated, pbn object stores some parameters, such as reference population allele frequencies. In the example two markers are analyzed, M1 and M2, with four alleles each one. 
 
 ```{r}
 pbn  <- initBN(toyped)
 pbn[["alelFreq"]]
 ```
 
-And both the mother (ID 2) is genotyped, being M1_p, mothers paternal allele and M1_m mothers maternal allele.
+The mother (ID 2) is genotyped, being M1_p, mothers paternal allele and M1_m mothers maternal allele.
 
 ```{r}
 pbn[["markerEvidence"]]
@@ -64,7 +64,7 @@ plot(bnet[["DAG"]], layout=layout_with_fr, vertex.size=15,
 
 # Computing genotype conditional probability tables
 
-The Bayesian network allows computing allele conditional probability tables. This process could be computationally expensive. After building CPTs, variable elimination approach used, it is a process by which we successively remove variables from the Bayesian network while maintaining its ability to answer queries of interest.
+The Bayesian network allows computing allele conditional probability tables (CPTs). This process could be computationally expensive. After building CPTs, variable elimination approach used, it is a process by which we successively remove variables from the Bayesian network while maintaining its ability to answer queries of interest.
 
 ```{r , message=FALSE, results='hide'}
 bn1 <- buildCPTs(bnet)
@@ -74,9 +74,9 @@ resQ <- velim.bn(bn1,ordMethod="min_fill",verbose=FALSE)
 
 # Analyzing conditioned probabilities
 
-Once computed, resQ contains conditioned genotype probabilities for individual 3, based on available evidence in the pedigree. The output allows us to compare conditioned probabilities with reference population data. Firstly, some data formatting should be done.
+Once computed, resQ contains conditioned genotype probabilities for individual 3, based on the available evidence in the pedigree. The output allows us to compare conditioned probabilities with reference population data. Firstly, some data formatting should be done.
 
-Firstly, some packages must be loaded for data analyses and plots.
+Some packages must be loaded for data analyses and plots.
 ```{r, message=FALSE, results='hide'}
 library(tidyverse)
 library(patchwork)

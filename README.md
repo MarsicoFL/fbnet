@@ -13,6 +13,8 @@
 
 
 fbnet is an open source software package written in R statistical languaje. It implements the complete *GENis* functionality, a recently published open-source multi-tier information system developed to run forensic DNA databases to perform kinship analysis based on DNA profiles. GENis is freely available on github: https://github.com/fundacion-sadosky/genis
+
+
 It relies on a Bayesian Networks framework and it is particularly well suited
 to efficiently perform large-size queries against databases of missing individuals.
 It could interact with the main functionallities of other packages for pedigree analysis. 

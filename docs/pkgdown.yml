@@ -4,7 +4,5 @@ pkgdown_sha: ~
 articles:
   Network: Network.html
   fbnet: fbnet.html
-  Caseexample: vignettes/Caseexample.html
-  fbnet: vignettes/fbnet.html
-last_built: 2023-02-27T13:47Z
+last_built: 2023-02-27T15:02Z
 

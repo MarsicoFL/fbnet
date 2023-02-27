@@ -9,7 +9,6 @@
 #' @param verbose Computations output. 
 #' @import igraph
 #' @examples
-#' pbn  <- initBN(toyped)
 #' bnet <- buildBN(pbn,QP=3)
 #' bn1  <- buildCPTs(bnet)
 #' @export

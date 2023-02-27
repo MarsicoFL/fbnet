@@ -5,7 +5,6 @@
 #' @import igraph
 #' @import grDevices
 #' @examples
-#' pbn  <- initBN(toyped)
 #' bnet <- buildBN(pbn,QP=3)
 #' @export
 #' @return A bayesian network based on pedigree evidence and QP definition.

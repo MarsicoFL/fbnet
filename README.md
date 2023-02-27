@@ -25,5 +25,5 @@ the pedigree data.
 fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ and Ministerio de Ciencia, Tecnología e Innovación of Argentina https://www.argentina.gob.ar/ciencia
 
 
-1- Vigeland, M. D. (2021). Pedigree analysis in R. Academic Press. \\
+1- Vigeland, M. D. (2021). Pedigree analysis in R. Academic Press. <br /> 
 2- Egeland, T., Kling, D., & Mostad, P. (2015). Relationship inference with familias and R: statistical methods in forensic genetics. Academic Press.

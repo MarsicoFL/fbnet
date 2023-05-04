@@ -20,7 +20,21 @@ to efficiently perform large-size queries against databases of missing individua
 It could interact with the main functionallities of other packages for pedigree analysis. 
 In particular, fbnet can interpret the pedigree formats from 'Familias' software (1). In addition 'pedtools', a software for creating and manipulating pedigrees and markers, is supported (2). fbnet allows computing LRs
 and obtaining genotype probability distributions for a query individual, based on 
-the pedigree data.
+the pedigree data. For installing fbnet please use the following command:
+
+``` r
+install.packages("fbnet")
+library(fbnet)
+```
+
+If you want to install a previous fbnet version, such as fbnet v1.0.1, that allows building and analyzing pedigrees please use:
+
+``` r
+install.packages("devtools")
+library(devtools)
+install.packages("fbnet")
+library(fbnet)
+```
 
 fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ and Ministerio de Ciencia, Tecnología e Innovación of Argentina https://www.argentina.gob.ar/ciencia
 

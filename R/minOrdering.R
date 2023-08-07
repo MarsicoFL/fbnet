@@ -3,6 +3,7 @@
 #' @param bn A bayesian network for pedigree object with information of the genotyped members. The ped object must be in Familias format.
 #' @param method Elimination method, min_degree or min_fill
 #' @param vars Subset of tables where the order is calculated
+#' @import paramlink
 #' @import igraph
 #' @export
 #' @return A bayesian network after ordering process.

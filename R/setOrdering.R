@@ -4,6 +4,7 @@
 #' @param ordMethod Ordering method.
 #' @param vars Vars
 #' @param orderElim Order elimination criteria.
+#' @import paramlink
 #' @import igraph
 #' @export
 #' @return A bayesian network after ordering process.

@@ -2,6 +2,7 @@
 #'
 #' @param topn Format parameter.
 #' @param resQ List of CPTs.
+#' @import paramlink
 #' @import igraph
 #' @export
 #' @return A MAP from the probability table.

@@ -14,6 +14,7 @@
 #' to perform kinship analysis based on DNA profiles \doi{10.1016/j.fsir.2020.100132}.
 #'
 #' @docType package
+#' @import paramlink
 #'
 #' @name fbnet
 NULL

@@ -2,6 +2,7 @@
 #'
 #' @param cpt Conditional probability table
 #' @param Z factor
+#' @import paramlink
 #' @import igraph
 #' @export
 #' @return A dataframe with probabilities.

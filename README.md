@@ -11,6 +11,9 @@
 
 <!-- badges: end -->
 
+## IMPORTANT NOTE
+This package is only maintained for legacy purposes. New releases of the fbnet packages and under-development version are available on https://github.com/chernolabs/fbnet-cran.
+
 
 fbnet is an open source software package written in R statistical languaje. It implements the complete *GENis* functionality, a recently published open-source multi-tier information system developed to run forensic DNA databases to perform kinship analysis based on DNA profiles. GENis is freely available on github: https://github.com/fundacion-sadosky/genis
 

@@ -27,6 +27,7 @@ Variable elimination result.
 velim.bn: a function for variable elimination in a bayesian network.
 }
 \examples{
+pbn  <- initBN(toyped)
 bnet <- buildBN(pbn,QP=3)
 bn1  <- buildCPTs(bnet)
 resQ <- velim.bn(bn1,ordMethod="min_fill",verbose=FALSE)

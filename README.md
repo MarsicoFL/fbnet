@@ -30,15 +30,6 @@ install.packages("fbnet")
 library(fbnet)
 ```
 
-If you want to install a previous fbnet version, such as fbnet v1.0.1, that allows building and analyzing pedigrees please use:
-
-``` r
-install.packages("devtools")
-library(devtools)
-install.packages("fbnet")
-library(fbnet)
-```
-
 fbnet and GENis projects are supported by Fundación Sadosky https://www.fundacionsadosky.org.ar/ and Ministerio de Ciencia, Tecnología e Innovación of Argentina https://www.argentina.gob.ar/ciencia
 
 

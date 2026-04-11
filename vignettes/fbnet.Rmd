@@ -222,3 +222,39 @@ p4 <- ggplot(GenoPed, aes(x = Var2, y = Var1)) +
 p3 + p4
 ```
 
+# Case-level fragility diagnostics via `mispitools`
+
+Once per-marker likelihood ratios have been extracted from the Bayesian network --- here we compute them as the ratio of pedigree-conditioned to population-baseline probabilities for the observed genotype at each marker --- they can be fed directly into the belief-trajectory framework of the `mispitools` package (version 1.4.0 and above; Marsico \& Egeland, in preparation). This gives a case-level diagnostic of how concentrated the evidence is in a single marker, and a leave-one-out fragility analysis of the inclusion support.
+
+```{r mispitools_integration, eval=FALSE}
+# Per-marker LR = ratio of pedigree-conditioned to population-baseline
+# probability at the observed (modal) genotype.
+if (requireNamespace("mispitools", quietly = TRUE)) {
+  library(mispitools)
+
+  obs_M1 <- names(which.max(M1_vec_ped))
+  obs_M2 <- names(which.max(M2_vec_ped))
+  LR_M1  <- as.numeric(M1_vec_ped[obs_M1] / M1_vec_pop[obs_M1])
+  LR_M2  <- as.numeric(M2_vec_ped[obs_M2] / M2_vec_pop[obs_M2])
+  lrs    <- c(M1 = LR_M1, M2 = LR_M2)
+
+  # Binary belief trajectory: P(H_p) evolves as markers accumulate
+  traj <- binary_belief_trajectory(lrs)
+  print(traj)
+
+  # Trajectory metrics: entropy, per-step KL, path length, concentration
+  prior   <- c(0.5, 0.5)
+  lr_list <- lapply(lrs, function(r) c(r, 1))
+  metrics <- trajectory_metrics(belief_trajectory(prior, lr_list))
+
+  # Concentration index (fragility diagnostic)
+  C_W_plus <- concentration_index_positive(log10(lrs))
+  cat("C_W+ =", round(C_W_plus, 3), "\n")
+
+  # Leave-one-out fragility table
+  leave_one_out(lrs)
+}
+```
+
+`concentration_index_positive` returns the fraction of the positive weight of evidence carried by the single most impactful marker. It equals zero for perfectly balanced contributions and approaches one when a single marker dominates. On the Argentine 15-STR database, the 90th percentile of this value under the true-kinship hypothesis is around `0.17` for 2nd-degree pedigrees and `0.19` for 3rd-degree pedigrees; cases above the pedigree-specific cutoff should trigger a leave-one-out review before the result is reported. See `?mispitools::trajectory_metrics` for the full API.
+

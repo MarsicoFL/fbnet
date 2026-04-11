@@ -2,6 +2,7 @@
 % Please edit documentation in R/fbnet.R
 \docType{package}
 \name{fbnet}
+\alias{fbnet-package}
 \alias{fbnet}
 \title{fbnet: Forensic Bayesian Networks}
 \description{
@@ -17,4 +18,22 @@ the pedigree data.
 'fbnet' implements the complete GENis functionality, a recently published open-source
 multi-tier information system developed to run forensic DNA databases
 to perform kinship analysis based on DNA profiles \doi{10.1016/j.fsir.2020.100132}.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://marsicofl.github.io/fbnet/}
+  \item \url{https://github.com/MarsicoFL/fbnet}
+  \item Report bugs at \url{https://github.com/MarsicoFL/fbnet/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Franco Marsico \email{franco.lmarsico@gmail.com}
+
+Authors:
+\itemize{
+  \item Ariel Chernomoretz \email{ariel@df.uba.ar}
+}
+
 }

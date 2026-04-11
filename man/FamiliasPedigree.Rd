@@ -19,7 +19,7 @@ FamiliasPedigree(id, dadid, momid, sex)
 A dataframe with probabilities.
 }
 \description{
-FamiliasPedigree: a function for constructing Familias pedigree format.
+This function has been entirely copied from Familias R package, it has been removed from CRAN. All references and citations about this function should be done to Familias developers. More information could be obtained from: https://www.familias.name/index.html. In fbnet package, this function is only used for dealing with the pedigree object.
 }
 \examples{
 persons <- c("mother", "child", "AF")

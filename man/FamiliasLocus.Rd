@@ -72,7 +72,7 @@ FamiliasLocus(
 Locus analysis.
 }
 \description{
-FamiliasLocus: a function for reading Familias locus data.
+This function has been entirely copied from Familias R package, it has been removed from CRAN. All references and citations about this function should be done to Familias developers. More information could be obtained from: https://www.familias.name/index.html. In fbnet package, this function is only used for dealing with the pedigree object.
 }
 \examples{
 frequencies <- c(0.1, 0.2, 0.3, 0.4)

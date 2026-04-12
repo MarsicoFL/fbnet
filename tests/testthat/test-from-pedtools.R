@@ -110,3 +110,34 @@ test_that("from_pedtools markerEvidence contains observed allele labels", {
   row <- which(rownames(pbn$markerEvidence) == "1")
   expect_true(all(pbn$markerEvidence[row, c("LocusA_p", "LocusA_m")] %in% c("A", "B")))
 })
+
+
+test_that("from_pedtools output drives the buildBN -> buildCPTs -> velim.bn pipeline end-to-end", {
+  skip_if_not_installed("pedtools")
+  skip_if_not_installed("forrel")
+  suppressPackageStartupMessages({
+    library(pedtools)
+    library(forrel)
+  })
+
+  ped <- linearPed(2)
+  ped <- setMarkers(ped, locusAttributes = NorwegianFrequencies[1:2])
+  ped <- profileSim(ped, N = 1, ids = 2, seed = 1)
+
+  pbn  <- from_pedtools(ped, QP = "5")
+  bn   <- buildBN(pbn, QP = "5")
+  bn1  <- buildCPTs(bn)
+  resQ <- velim.bn(bn1, ordMethod = "min_fill", verbose = FALSE)
+
+  # The query person's two alleles per marker should be present in the result
+  expected <- c("5_D3S1358_p", "5_D3S1358_m", "5_TH01_p", "5_TH01_m")
+  expect_true(all(expected %in% names(resQ)))
+
+  # Each result is a data frame with allele labels and a `prob` column
+  for (nm in expected) {
+    df <- resQ[[nm]]
+    expect_s3_class(df, "data.frame")
+    expect_true("prob" %in% colnames(df))
+    expect_true(all(df$prob >= 0))
+  }
+})

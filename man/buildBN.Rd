@@ -18,6 +18,13 @@ A bayesian network based on pedigree evidence and QP definition.
 buildBN: a function for building the bayesian network.
 }
 \examples{
-pbn  <- initBN(toyped)
-bnet <- buildBN(pbn,QP=3)
+\dontrun{
+  # Modern entry point via pedtools (recommended):
+  library(pedtools); library(forrel)
+  ped  <- linearPed(2)
+  ped  <- setMarkers(ped, locusAttributes = NorwegianFrequencies[1:2])
+  ped  <- profileSim(ped, N = 1, ids = 2, seed = 1)
+  pbn  <- from_pedtools(ped, QP = "5")
+  bnet <- buildBN(pbn, QP = "5")
+}
 }

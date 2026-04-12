@@ -2,10 +2,12 @@
 #'
 #' @param ped A ped object with information of the genotyped members. The ped object must be in Familias format.
 #' @param bplotped An alternative ped object to be compared. 
-#' @import paramlink
 #' @import graphics
-#' @examples 
-#' pbn  <- initBN(toyped)
+#' @examples
+#' \dontrun{
+#'   # Legacy paramlink-based entry point. Use from_pedtools() instead.
+#'   pbn  <- initBN(toyped)
+#' }
 #' @export
 #' @return A bayesian network.
 

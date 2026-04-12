@@ -2,11 +2,15 @@
 #'
 #' @param x A pedtools ped object.
 #' @param verbose  Function output.
-#' @import paramlink
 #' @export
 #' @return A dataframe with LRs.
 
 convertPedformat = function(x, verbose=FALSE) {
+  if (!requireNamespace("paramlink", quietly = TRUE))
+    stop("convertPedformat() depends on the archived 'paramlink' package, ",
+         "which is not available on CRAN since 2022. Use from_pedtools() ",
+         "instead, which builds the fbnet input directly from pedtools::ped.")
+
   afreq <- alleles <- chrom <- isXmarker <- mutmod <- nAlleles <- name <- posMb <- NULL
   famid = 1
 

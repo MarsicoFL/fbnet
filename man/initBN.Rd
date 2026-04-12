@@ -18,5 +18,8 @@ A bayesian network.
 initBN: a function to initialize the bayesian network.
 }
 \examples{
-pbn  <- initBN(toyped)
+\dontrun{
+  # Legacy paramlink-based entry point. Use from_pedtools() instead.
+  pbn  <- initBN(toyped)
+}
 }

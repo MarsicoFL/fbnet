@@ -22,8 +22,14 @@ A bayesian network based on pedigree evidence and QP definition.
 getLocusCPT: a function for obtaining the coditional probability table from a specific locus.
 }
 \examples{
-pbn  <- initBN(toyped)
-bnet <- buildBN(pbn,QP=3)
-bn1  <- buildCPTs(bnet)
-locCPT <- getLocusCPT(bn1,"M1")
+\dontrun{
+  library(pedtools); library(forrel)
+  ped  <- linearPed(2)
+  ped  <- setMarkers(ped, locusAttributes = NorwegianFrequencies[1:2])
+  ped  <- profileSim(ped, N = 1, ids = 2, seed = 1)
+  pbn  <- from_pedtools(ped, QP = "5")
+  bnet <- buildBN(pbn, QP = "5")
+  bn1  <- buildCPTs(bnet)
+  locCPT <- getLocusCPT(bn1, "D3S1358")
+}
 }

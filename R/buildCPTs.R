@@ -7,12 +7,17 @@
 #' @param lumpingParameter Used for stepwise mutational model.
 #' @param renorm If "row-wise" is selected, zero probability is assigned for transitions out of range. 
 #' @param verbose Computations output. 
-#' @import paramlink
 #' @import igraph
 #' @examples
-#' pbn  <- initBN(toyped)
-#' bnet <- buildBN(pbn,QP=3)
-#' bn1  <- buildCPTs(bnet)
+#' \dontrun{
+#'   library(pedtools); library(forrel)
+#'   ped  <- linearPed(2)
+#'   ped  <- setMarkers(ped, locusAttributes = NorwegianFrequencies[1:2])
+#'   ped  <- profileSim(ped, N = 1, ids = 2, seed = 1)
+#'   pbn  <- from_pedtools(ped, QP = "5")
+#'   bnet <- buildBN(pbn, QP = "5")
+#'   bn1  <- buildCPTs(bnet)
+#' }
 #' @export
 #' @return A bayesian network based on pedigree evidence and QP definition.
 

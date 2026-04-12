@@ -1,12 +1,16 @@
 #' initBN.fromVars: a function to initialize the bayesian network.
 #'
 #' @param bplotped An alternative ped object to be compared. 
-#' @import paramlink
 #' @import graphics
 #' @export
 #' @return A bayesian network.
 
 initBN.fromVars<-function(bplotped){
+if (!requireNamespace("paramlink", quietly = TRUE))
+  stop("initBN.fromVars() depends on the archived 'paramlink' package, ",
+       "which is not available on CRAN since 2022. Use from_pedtools() ",
+       "instead, which accepts a pedtools::ped object directly.")
+
 ped1 <- FamiliasPedigree(id=persons,dadid=pid,momid=mid,sex=sex)
 
 persons <- pid <- mid <- sex <- systems <- lLociFreq <- linkageR <- bSimuData <- simuKnownIds <- QP <- NULL

@@ -4,7 +4,6 @@
 #' @param resQ List of CPTs.
 #' @param geno data.frame with genotypes.
 #' @param lqp list of individuals genotypes.
-#' @import paramlink
 #' @import igraph
 #' @export
 #' @return A dataframe with genotype probabilities.

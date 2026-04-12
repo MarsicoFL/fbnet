@@ -23,8 +23,11 @@ Imports:
     grDevices,
     igraph,
     stats,
-    Rsolnp,
-    assertthat,
-    utils
+    Rsolnp
 Suggests:
-    mispitools (>= 1.4.0)
+    mispitools (>= 1.4.0),
+    pedtools,
+    forrel,
+    paramlink,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

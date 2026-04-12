@@ -2,12 +2,16 @@
 #'
 #' @param bplotped An alternative ped object to be compared. 
 #' @param ped A ped object in Familias format. 
-#' @import paramlink
 #' @import graphics
 #' @export
 #' @return A bayesian network.
 
 initBN.fromPed<-function(ped,bplotped){
+  if (!requireNamespace("paramlink", quietly = TRUE))
+    stop("initBN.fromPed() depends on the archived 'paramlink' package, ",
+         "which is not available on CRAN since 2022. Use from_pedtools() ",
+         "instead, which accepts a pedtools::ped object directly.")
+
   lLociFreq <-  NULL
 
 persons <- as.character(ped$orig.ids)

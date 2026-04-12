@@ -4,13 +4,18 @@
 #' @param ordMethod Selected ordering method between id, min_degree, min_fill and fixed.
 #' @param orderElim Elimination order.
 #' @param verbose Computation output.
-#' @import paramlink
 #' @import igraph
 #' @examples
-#' pbn  <- initBN(toyped)
-#' bnet <- buildBN(pbn,QP=3)
-#' bn1  <- buildCPTs(bnet)
-#' resQ <- velim.bn(bn1,ordMethod="min_fill",verbose=FALSE)
+#' \dontrun{
+#'   library(pedtools); library(forrel)
+#'   ped  <- linearPed(2)
+#'   ped  <- setMarkers(ped, locusAttributes = NorwegianFrequencies[1:2])
+#'   ped  <- profileSim(ped, N = 1, ids = 2, seed = 1)
+#'   pbn  <- from_pedtools(ped, QP = "5")
+#'   bnet <- buildBN(pbn, QP = "5")
+#'   bn1  <- buildCPTs(bnet)
+#'   resQ <- velim.bn(bn1, ordMethod = "min_fill", verbose = FALSE)
+#' }
 #' @export
 #' @return Variable elimination result.
 
